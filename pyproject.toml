@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-context-tool"
+version = "0.2.0"
+description = "Portable CLI for safely applying Codex model context overrides."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Codex Context Tool Contributors" }]
+keywords = ["codex", "context", "model-catalog", "cli"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Utilities",
+]
+
+[project.scripts]
+codex-context-tool = "codex_context_tool:main"
+codex-gpt55-context = "codex_context_tool:main"
+
+[tool.setuptools]
+py-modules = ["codex_context_tool", "codex_gpt55_context"]
