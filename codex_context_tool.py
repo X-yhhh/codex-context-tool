@@ -699,7 +699,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--auto-compact-token-limit",
         type=positive_cli_int,
-        help=f"Root {COMPACT_KEY} value to write. Default: 90% of the selected context window.",
+        help=f"Root {COMPACT_KEY} value to write. Default: 90%% of the selected context window.",
     )
 
     subparsers = parser.add_subparsers(dest="command", required=True)
